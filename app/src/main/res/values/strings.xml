@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WIFI-Scanner</string>
+    <string name="WIFI_MAC_ADDRESS">MAC_ADDRESS</string>
+    <string name="WIFI_NAME">NAME</string>
+    <string name="WIFI_RSSI">RSSI</string>
+    <string name="WIFI_MEASURE_DATE">MEASURE_DATE</string>
+    <string name="WIFI_TARGET">IS_TARGET</string>
+    <string name="title_activity_wifi_info">WifiInfoActivity</string>
+
+</resources>

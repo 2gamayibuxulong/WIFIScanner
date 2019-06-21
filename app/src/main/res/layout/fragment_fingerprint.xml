@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FingerprintActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="582dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="录入区域信息" />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="X" />
+
+        <EditText
+            android:id="@+id/location_X"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Y" />
+
+        <EditText
+            android:id="@+id/location_Y"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="以下WIFI接入点会参与指纹构建" />
+
+        <TextView
+            android:id="@+id/targetAP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/begin_locate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始构建" />
+
+        <Button
+            android:id="@+id/delete_locate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除该定位点指纹" />
+
+        <TextView
+            android:id="@+id/EasyTargetCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="纳入简易构建AP信号数" />
+
+        <EditText
+            android:id="@+id/EasyCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/EasyTargetTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="扫描总时间（0.5秒触发一次扫描） 输入总扫描时间（毫秒）" />
+
+        <EditText
+            android:id="@+id/EasyTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/begin_locate_Easy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简易开始构建" />
+
+
+        <EditText
+            android:id="@+id/service_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/setup_service_addressBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设置服务器地址"
+            android:padding="0dp"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocateActivity">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="定位区域"/>
+        <EditText
+            android:id="@+id/request_locateZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请求定位区域" />
+
+        <Button
+            android:id="@+id/request_locate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请求定位" />
+
+
+        <Button
+            android:id="@+id/request_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="定位数据" />
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>目前定位轨迹情况</h1>
+<canvas id="nowCanvas"style="border:1px solid #c3c3c3; width: 100%;height: 100%">
+    Your browser does not support the canvas element.
+</canvas>
+<h1>以往定位轨迹情况</h1>时间<input id="dateTime">地点<input id="where">
+<button type="button" onclick="search()">查询</button>
+<canvas id="oldCanvas"style="border:1px solid #c3c3c3; width: 100%;height: 100%">
+    Your browser does not support the canvas element.
+</canvas>
+<script type="text/javascript">
+
+        var c=document.getElementById("nowCanvas");
+        var cxt=c.getContext("2d");
+//        cxt.moveTo(0,0);
+        var old=document.getElementById("oldCanvas");
+        var oldcxt=c.getContext("2d");
+//        oldcxt.moveTo(0,0);
+
+        function beginDraw(x,y){
+            cxt.moveTo(x*40,y*40);
+        }
+        function oldbeginDraw(x,y){
+            oldcxt.moveTo(x*40,y*40);
+        }
+
+
+        function drawLine(x,y){
+            cxt.lineTo(x*40,y*40);
+        }
+        function olddrawLine(x,y){
+            oldcxt.lineTo(x*40,y*40);
+        }
+
+        function endDraw(){
+            cxt.stroke();
+        }
+        function oldendDraw(){
+            oldcxt.stroke();
+        }
+
+        function drawText(text,x,y){
+            cxt.fillStyle = '#999';
+            //设置用户文本的大小字体等属性
+            cxt.font = "5px Georgia";
+            //绘制文字
+            cxt.fillText(text,x*40,y*40);
+        }
+        function olddrawText(text,x,y){
+            oldcxt.fillStyle = '#999';
+            //设置用户文本的大小字体等属性
+            oldcxt.font = "5px Georgia";
+            //绘制文字
+            oldcxt.fillText(text,x*40,y*40);
+        }
+
+        function request_locate(){
+            test.request_locate();
+        }
+
+        function returnResult(x,y){
+            drawLine(x,y);
+            endDraw();
+        }
+        function oldreturnResult(x,y){
+            olddrawLine(x,y);
+            oldendDraw();
+        }
+
+        setInterval(request_locate,5000);
+
+        function search(){
+            var date=document.getElementById('dateTime').value;
+            var where=document.getElementById('where').value;
+            test.getRecord(date,where);
+        }
+    </script>
+</body>
+</html>
